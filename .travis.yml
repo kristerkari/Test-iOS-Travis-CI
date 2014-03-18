@@ -1,5 +1,9 @@
 language: objective-c
 cache: bundler
+before_install:
+  - brew update
+  - brew install xctool
+  - pod install
 
 script:
   - xctool -workspace TryTravisCI.xcworkspace -scheme TryTravisCI -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
