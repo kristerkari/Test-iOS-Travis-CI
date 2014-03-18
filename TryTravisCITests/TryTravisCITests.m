@@ -23,6 +23,10 @@ describe(@"In our first Kiwi test", ^{
             [[greeting should] equal:@"Hello, World!"];
         });
 
+        it(@"should not be 'Hello'.", ^{
+            [[greeting shouldNot] equal:@"Hello"];
+        });
+        
     });
 });
 
